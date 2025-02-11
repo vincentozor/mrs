@@ -436,3 +436,37 @@ background-color: #007bff;
 .view-more-button:hover {
     background-color: #0056b3;
 }
+
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   /* Only take up the full height if needed */
+}
+  
+  .image-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    animation: riseAndScale 2s infinite ease-in-out;
+  }
+  
+  .image-button img {
+    display: block;
+    width: 80%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  @keyframes riseAndScale {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-20px) scale(1.2);
+    }
+  }
