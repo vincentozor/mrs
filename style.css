@@ -368,7 +368,7 @@ background-color: #007bff;
     color: #fff;
     padding: 20px 0;
     text-align: center;
-    border-top:#e8491d 3px solid;
+    border-top:#fff 3px solid;
     line-height: 25px;
 }
 .footer-links {
@@ -438,35 +438,94 @@ background-color: #007bff;
 }
 
 
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-   /* Only take up the full height if needed */
-}
-  
+ /* Container for centering */
+ .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  /* Button styling */
   .image-button {
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
-    overflow: hidden;
+    overflow: hidden !important;
     position: relative;
-    animation: riseAndScale 2s infinite ease-in-out;
+    animation: riseAndScale 4s infinite ease-in-out;
   }
-  
+
   .image-button img {
     display: block;
-    width: 80%;
+    width: 100%;
+    max-width: 300px; /* Adjust as needed */
     height: auto;
     transition: transform 0.3s ease;
   }
-  
+
+  /* Animation */
   @keyframes riseAndScale {
     0%, 100% {
       transform: translateY(0) scale(1);
     }
     50% {
-      transform: translateY(-20px) scale(1.2);
+      transform: translateY(-5px) scale(1.1);
     }
+  }
+
+  /* Media queries for smaller screens */
+  @media (max-width: 768px) {
+    .image-button img {
+      max-width: 150px; /* Smaller image on mobile */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .image-button img {
+      max-width: 100%; /* Even smaller image on very small screens */
+    }
+  }
+
+
+  .myButton {
+    background-color: #007BFF; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px; /* Optional: for rounded corners */
+  }
+
+  .myButton:hover {
+    background-color: #008CBA; /* Blue */
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .myButton2 {
+    background-color: #007BFF; /* Green */
+    border: none;
+    color: white;
+   
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px; /* Optional: for rounded corners */
+    width: 130px;
+  }
+
+  .myButton2:hover {
+    background-color: #008CBA; /* Blue */
   }
